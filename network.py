@@ -124,7 +124,7 @@ class VGG16(object):
                 feed_dict = {self.inputs: inputs, self.labels: labels}
                 loss, _ = self.sess.run(
                     [self.loss_op, self.train_op], feed_dict=feed_dict)
-                print('----training loss', loss)
+                print("Epoch", epoch_num,'----training loss', loss)
             if epoch_num and epoch_num % self.conf.save_interval == 0:
                 self.save(epoch_num+self.conf.reload_step)
 
