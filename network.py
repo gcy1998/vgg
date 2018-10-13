@@ -1,7 +1,9 @@
-import os
+import sys
+sys.path.append('./utils')
+
 import tensorflow as tf
-from utils.data_reader import H5DataLoader
-from utils import ops
+from data_reader import H5DataLoader
+import ops
 
 
 class VGG16(object):
